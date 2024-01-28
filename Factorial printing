@@ -1,0 +1,17 @@
+public class Main {
+    static int  factorial(int n){
+       if(n==0)
+           return 1;
+           int smallfact=factorial(n-1);
+           int ans=n*smallfact;
+           return ans;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter number :");
+        int x=sc.nextInt();
+        System.out.println("the factorial  is:");
+       int totalfactorial= factorial(x);
+        System.out.println(totalfactorial);
+    }
+}
