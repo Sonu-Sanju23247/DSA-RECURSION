@@ -1,0 +1,16 @@
+// 2. Sum of the digits  inputted by user.
+//ex- Input: 512  output: 5+1+2=8
+
+public class Main {
+    static int sod(int n){
+        if(n>=0 && n<=9)
+            return n;
+        int smallsod=sod(n/10);
+        return smallsod+n%10;
+    }
+    public static void main(String[]args){
+        int n=123;
+        int sumofdigits=sod(n);
+        System.out.println(sumofdigits);
+    }
+}
