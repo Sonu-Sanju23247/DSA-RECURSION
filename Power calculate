@@ -1,0 +1,15 @@
+ // CALCULATE P^Q using recursion:
+
+public class Main {
+    static int pow(int p,int q){
+        if(q==0)
+            return 1;
+        return  pow(p,q-1)*p;
+    }
+    public static void main(String[]args){
+        int a=2;
+        int b=3;
+        int calculatepower=pow(a,b);
+        System.out.println(calculatepower);
+    }
+}
