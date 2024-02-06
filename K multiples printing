@@ -1,0 +1,21 @@
+// CALCULATE THE K MULTIPLES OF NUMBER ENTERED BY USER:
+public class Main {
+    static void printMultiple(int n,int k){
+        if(k==1){
+            System.out.println(n);
+            return;
+        }
+        printMultiple(n,k-1);
+        System.out.println(n*k);
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the  number:");
+        int x=sc.nextInt();
+        System.out.println("enter upto which multiple is printed:");
+        int y=sc.nextInt();
+       printMultiple(x,y);
+
+
+    }
+}
