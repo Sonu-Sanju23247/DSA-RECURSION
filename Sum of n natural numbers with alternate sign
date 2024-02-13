@@ -1,0 +1,24 @@
+// Write a programm that will print the sum of the series of  "n" natural number with alternate sign 
+Input: 5
+Output: 1-2+3-4+5=3
+
+public class Main {
+    static int  printSum(int n){
+        if(n==0){
+            return 0;
+    }
+        if(n%2==0) {
+            return printSum(n - 1) - n;
+        }
+        else {
+            return printSum(n - 1) + n;
+        }
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+       System.out.println("enter the number");
+       int x=sc.nextInt();
+       int a=printSum(x);
+        System.out.println(a);
+    }
+}
